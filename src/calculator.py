@@ -41,7 +41,7 @@ class Atmosphere:
         return P_t1, T_t1
     
 
-class Nozzle:
+class Inlet:
     def __init__(self, inlet_conditions, ideal=True, tau_d=None, phi_d=None):
         self.inlet_conditions = inlet_conditions
         self.station_id = 2
@@ -164,10 +164,10 @@ def main():
     Nozzle_ideal_cycle = config['nozzle_data']['ideal_cycle']
 
     if Nozzle_ideal_cycle:
-        nozzle = Nozzle((P_t1, T_t1), ideal=True)
+        nozzle = Inlet((P_t1, T_t1), ideal=True)
     else:
         nozzle_data = config['nozzle_data']
-        nozzle = Nozzle(
+        nozzle = Inlet(
             (P_t1, T_t1),
             ideal=False,
             tau_d=nozzle_data.get('tau_diffuser'),
