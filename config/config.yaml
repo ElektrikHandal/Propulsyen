@@ -1,0 +1,33 @@
+ambient_data:
+  ambient_pressure: 22632 # Pascal
+  ambient_temperature: 216.7 # Kelvin 
+  ambient_mach_number: 3.0
+
+gas_data:
+  gamma: 1.4
+  R: 287.0 # J/kg-K
+  C_p: 1.004 # J/kg-K
+  H_PR : 43e6 # J/kg
+
+
+inlet_data:
+  ideal: true
+  tau_diffuser: 1
+  phi_diffuser: 1
+
+combustion_chamber_data:
+  combustion_efficiency: 1
+  combustion_pressure_loss: 1
+  combustion_temperature: 1600 # Kelvin
+
+nozzle_data:
+  ideal_cycle: true
+  tau_diffuser: 1
+  phi_diffuser: 1
+
+nozzle_exit_data:
+  ideal_cycle: true
+  tau_nozzle: 1
+  phi_nozzle: 1
+
+
