@@ -267,7 +267,7 @@ def print_results(res: dict) -> None:
     print(f"  Ram temperature ratio (τ_r) : {res['tau_r']:.4f}")
     print(f"  Compressor temp ratio (τ_c) : {res['tau_c']:.4f}")
     print(f"  Turbine temp ratio    (τ_t) : {res['tau_t']:.4f}")
-    print(f"  Turbine pressure ratio(π_t) : {res['pi_t']:.4f}")
+    print(f"  Turbine pressure ratio (π_t) : {res['pi_t']:.4f}")
     print(f"  Fuel-to-air ratio     (f)   : {res['f']:.5f}")
     print(f"  Nozzle exit velocity  (V9)  : {res['V9_m_per_s']:.2f} m/s")
     print(f"  Fully-expanded vel (V9e)    : {res['V9e_m_per_s']:.2f} m/s")
