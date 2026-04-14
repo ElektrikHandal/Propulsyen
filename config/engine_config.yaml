@@ -1,0 +1,42 @@
+# ============================================================
+# Engine Parametric Cycle Analysis – Input Configuration
+# ============================================================
+# Turbojet engine design-point analysis
+# Reference: Mattingly, "Elements of Propulsion: Gas Turbines
+#            and Rockets", 2nd ed.
+# ============================================================
+
+# ── Flight / Ambient Conditions ──────────────────────────────
+ambient:
+  altitude_m: 10000          # Altitude [m]
+  mach_number: 0.8           # Flight Mach number [-]
+  temperature_K: 223.15      # Static temperature [K]  (ISA @ 10 km)
+  pressure_kPa: 26.50        # Static pressure [kPa]   (ISA @ 10 km)
+
+# ── Gas Properties ───────────────────────────────────────────
+# Cold section  : inlet + compressor  (air only)
+# Hot section   : turbine + nozzle    (combustion products)
+gas_properties:
+  gamma_cold: 1.40           # Ratio of specific heats – cold  [-]
+  cp_cold_J_per_kgK: 1004    # Specific heat cp – cold  [J/(kg·K)]
+  gamma_hot: 1.33            # Ratio of specific heats – hot   [-]
+  cp_hot_J_per_kgK: 1148     # Specific heat cp – hot   [J/(kg·K)]
+
+# ── Component Efficiencies ───────────────────────────────────
+efficiencies:
+  inlet: 0.99                # Total-pressure recovery (π_d / π_d_max)  [-]
+  compressor: 0.85           # Isentropic compressor efficiency  [-]
+  burner: 0.98               # Combustion efficiency             [-]
+  turbine: 0.90              # Isentropic turbine efficiency     [-]
+  nozzle: 0.98               # Nozzle isentropic efficiency      [-]
+
+# ── Design Parameters ────────────────────────────────────────
+design:
+  compressor_pressure_ratio: 20.0    # Overall compressor pressure ratio π_c  [-]
+  turbine_inlet_temperature_K: 1700  # Turbine inlet total temperature T_t4  [K]
+  burner_pressure_ratio: 0.96        # Burner total-pressure ratio π_b       [-]
+
+# ── Fuel Properties ──────────────────────────────────────────
+fuel:
+  heating_value_J_per_kg: 42800000   # Lower heating value h_PR  [J/kg]
+  # Typical value for Jet-A / JP-8 kerosene fuel
